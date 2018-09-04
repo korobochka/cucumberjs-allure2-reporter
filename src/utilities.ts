@@ -5,6 +5,7 @@ import { Example } from "./events/Example";
 export function statusTextToAllure(status?: string): Status {
 	if (status === "passed") return Status.PASSED;
 	if (status === "skipped") return Status.SKIPPED;
+	if (status === "pending") return Status.SKIPPED;
 	if (status === "failed") return Status.FAILED;
 	return Status.BROKEN;
 }

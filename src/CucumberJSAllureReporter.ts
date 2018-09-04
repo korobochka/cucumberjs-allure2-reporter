@@ -188,7 +188,7 @@ export class CucumberJSAllureFormatter extends Formatter {
 		}
 		if (step === undefined) throw new Error("Unknown step");
 
-		let stepText = applyExample(`${step.keyword}${step.text}`, test.example);
+		let stepText = applyExample(`${step.text}`, test.example);
 
 		const isAfter = this.afterHooks.find(({ uri, line }) => {
 			if (location.actionLocation === undefined) return false;
